@@ -1,0 +1,10 @@
+version: '3'
+services:
+  conduict:
+    build:
+      context: ./app
+    restart: always
+    volumes:
+      - ./app:/src
+    ports:
+      - "8900:8900"
