@@ -3,5 +3,6 @@ node('docker') {
         checkout scm
     stage 'Build & UnitTest'
         sh "echo 'HHEHHEH'"
+        sh "ls -l"
         sh "docker-compose up -d"
 }
