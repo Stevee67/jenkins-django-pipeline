@@ -4,5 +4,6 @@ node('docker') {
     stage 'Build & UnitTest'
         sh "echo 'HHEHHEH'"
         sh "ls -l"
-        sh "docker-compose up -d"
+        sh "docker build -t conduict:B${BUILD_NUMBER} -f ./app/Dockerfile ."
+        sh "docker-compose run --rm conduict bash -c 'python manage.py test'"
 }
