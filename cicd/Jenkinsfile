@@ -2,13 +2,6 @@ node('docker') {
     stage 'Checkout'
         checkout scm
     stage 'Build & UnitTest'
-        sh "echo 'HHEHHEH'"
-        sh "ls -l"
-        sh "ls -l admin-panel/"
-        try {
-           sh "docker-compose run --rm admin-panel bash -c 'cd admin_panel && py.test -v'"
-        } catch (error) {
-            echo "Error"
-            currentBuild.result = 'UNSTABLE'
-        }
+        sh "echo 'Star unittests'"
+        sh "docker-compose run --rm admin-panel bash -c 'cd admin_panel && py.test -v'"
 }
