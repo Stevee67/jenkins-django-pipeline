@@ -5,5 +5,5 @@ node('docker') {
         sh "echo 'HHEHHEH'"
         sh "ls -l"
         sh "ls -l admin-panel/"
-        sh "docker-compose run --rm admin-panel bash -c 'py.test'"
+        sh "docker-compose run --rm admin-panel bash -c 'cd admin_panel && py.test'"
 }
