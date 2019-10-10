@@ -3,7 +3,7 @@ node('docker') {
         checkout scm
     stage 'Build & UnitTest'
         sh "ls -l"
-        sh "docker build -t admin-panel:B${BUILD_NUMBER} -f Dockerfile ."
+        sh "docker build -t admin-panel:B${BUILD_NUMBER} -f admin-panel/Dockerfile ."
         sh "docker-compose run --rm admin-panel bash -c 'cd admin_panel && py.test -v'"
     stage 'Cleanup'
         sh "docker rmi admin-panel:B${BUILD_NUMBER}"
