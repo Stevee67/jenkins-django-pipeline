@@ -4,7 +4,7 @@ ADD ./ /admin_panel
 WORKDIR /admin_panel
 
 RUN pip3 install --upgrade pip
-RUN pip3 install -r ./requirements.txt
+RUN pip3 install -r admin-panel/requirements.txt
 
 EXPOSE 8900
 
