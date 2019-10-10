@@ -1,7 +1,7 @@
 version: '3'
 services:
   admin-panel:
-    image: "admin-panel:${BUILD_NUMBER}"
+    image: "admin-panel:B${BUILD_NUMBER}"
     build:
       context: .
     ports:
