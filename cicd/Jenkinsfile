@@ -4,7 +4,7 @@ node('docker') {
     stage 'Build & UnitTest'
         sh "echo 'HHEHHEH'"
         sh "ls -l"
-        sh "ls -l app/"
+        sh "ls -l admin-panel/"
         sh "docker build -t admin-panel:B${BUILD_NUMBER} -f app/Dockerfile ."
         sh "dd run --rm admin-panel test"
 }
