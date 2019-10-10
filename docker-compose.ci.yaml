@@ -3,6 +3,8 @@ services:
   admin-panel:
     image: "admin-panel:B${BUILD_NUMBER}"
     build:
-      context: .
+      context: ./admin-panel
+    volumes:
+    - ./admin-panel:/admin-panel
     ports:
       - "8900:8900"
