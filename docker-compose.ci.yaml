@@ -1,0 +1,6 @@
+version: '3'
+services:
+  admin-panel:
+    image: "admin-panel:${BUILD_NUMBER}"
+    ports:
+      - "8900:8900"
