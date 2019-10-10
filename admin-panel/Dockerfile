@@ -1,7 +1,7 @@
 FROM python:3.6
 
-ADD ./ /src
-WORKDIR /src
+ADD ./ /admin_panel
+WORKDIR /admin_panel
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r ./requirements.txt
