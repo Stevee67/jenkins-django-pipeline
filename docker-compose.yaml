@@ -5,6 +5,6 @@ services:
       context: ./admin-panel
     restart: always
     volumes:
-      - ./admin-panel:/src
+      - ./admin-panel:/admin-panel
     ports:
       - "8900:8900"
