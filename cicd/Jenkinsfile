@@ -5,6 +5,6 @@ node('docker') {
         sh "echo 'HHEHHEH'"
         sh "ls -l"
         sh "ls -l app/"
-        sh "docker build -t conduict:B${BUILD_NUMBER} -f app/Dockerfile ."
-        sh "docker-compose run --rm conduict bash -c 'python manage.py test'"
+        sh "docker build -t admin-panel:B${BUILD_NUMBER} -f app/Dockerfile ."
+        sh "dd run --rm admin-panel test"
 }

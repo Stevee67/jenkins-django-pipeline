@@ -1,10 +1,10 @@
 version: '3'
 services:
-  conduict:
+  admin-panel:
     build:
-      context: ./app
+      context: ./admin-panel
     restart: always
     volumes:
-      - ./app:/src
+      - ./admin-panel:/src
     ports:
       - "8900:8900"
