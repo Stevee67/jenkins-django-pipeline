@@ -4,7 +4,6 @@ node('docker') {
             checkout scm
         }
         stage('Build & UnitTest'){
-            sh "ls -l"
             sh "docker build -t admin-panel:B${BUILD_NUMBER} -f admin-panel/Dockerfile ."
             sh "docker-compose -f docker-compose.ci.yaml run --rm admin-panel bash -c 'cd admin-panel/admin_panel && py.test -v'"
         }
