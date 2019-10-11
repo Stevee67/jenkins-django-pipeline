@@ -8,7 +8,6 @@ node('docker') {
             sh "docker-compose -f docker-compose.ci.yaml run --rm admin-panel bash -c 'cd admin-panel/admin_panel && py.test -v'"
         }
      } finally {
-        sh "echo 'Cleanup'"
         sh "docker rmi admin-panel:B${BUILD_NUMBER}"
     }
 }
